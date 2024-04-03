@@ -42,9 +42,22 @@ class ViewController: UIViewController, CalcInteractor {
         
     }
 
+    @IBAction func tappedMultiplicationButton(_ sender: UIButton) {
+        self.calculator.tappedOpe(operand: "*")
+    }
+    @IBAction func tappedDivisionButton(_ sender: UIButton) {
+        self.calculator.tappedOpe(operand: "÷")
+    }
+    
+    @IBAction func tappedAllClearButton(_ sender: UIButton) {
+        calculator.clearAll()
+    }
+    
+    @IBAction func tappedClearButton(_ sender: UIButton) {
+        calculator.clearLast()
+    }
     @IBAction func tappedEqualButton(_ sender: UIButton) {
         self.calculator.makeOperation()
     }
-
+    
 }
-
