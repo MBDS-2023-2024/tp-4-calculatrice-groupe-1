@@ -19,8 +19,8 @@ class ViewController: UIViewController, CalcInteractor {
 
     // View Life cycles
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+            super.viewDidLoad()
+            // Do any additional setup after loading the view.
     }
     
     
@@ -33,17 +33,18 @@ class ViewController: UIViewController, CalcInteractor {
         self.calculator.tapped(number: numberText)
     }
     
+    
     @IBAction func tappedAdditionButton(_ sender: UIButton) {
         self.calculator.tappedOpe(operand: "+")
     }
     
+   
     @IBAction func tappedSubstractionButton(_ sender: UIButton) {
         self.calculator.tappedOpe(operand: "-")
-        
     }
-
+    
     @IBAction func tappedMultiplicationButton(_ sender: UIButton) {
-        self.calculator.tappedOpe(operand: "*")
+        self.calculator.tappedOpe(operand: "x")
     }
     @IBAction func tappedDivisionButton(_ sender: UIButton) {
         self.calculator.tappedOpe(operand: "÷")
@@ -53,11 +54,16 @@ class ViewController: UIViewController, CalcInteractor {
         calculator.clearAll()
     }
     
+    
     @IBAction func tappedClearButton(_ sender: UIButton) {
         calculator.clearLast()
     }
+    
+    
+    
     @IBAction func tappedEqualButton(_ sender: UIButton) {
         self.calculator.makeOperation()
     }
+    
     
 }
